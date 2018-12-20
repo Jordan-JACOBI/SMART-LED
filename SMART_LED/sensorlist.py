@@ -7,3 +7,4 @@ class SensorList(Enum) :
 	HUMIDITY = 1
 	BRIGHTNESS = 2
 	IR = 3
+	PIR = 4
