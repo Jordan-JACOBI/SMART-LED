@@ -16,7 +16,7 @@ class Master :
 	
 	# PRIVATE METHOD TO IMPLEMENT COMMANDS
 	def sendCommand(self, topic, command) :
-		self.client.publish(topic, command, 0, False)
+		self.client.publish(topic, command, 1, False)
 		pass
 	
 ##### COMMANDS #####
