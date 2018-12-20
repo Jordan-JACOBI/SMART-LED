@@ -1,0 +1,18 @@
+I2C address : 100 0000 (7-bit address)
+
+/!\ Registers from 0x03 to 0xFA are reserved : not to be written
+
+STEPS TO PERFORM AQUISITION :
+
+1) Configure acquisition parameters in register 0x02
+	a. both temperature & HR : Bit[12] to 1
+	b. temperature resolution : Bit[10] to 0( 14-bit) or 1 (11_bit)
+	c. HR resolution : Bit[9:8] to 00 (14-bit) or 01 (11-bit) or 10 (8-bit)
+
+2) Trigger measurements by executing a pointer write transaction with the address pointer set to 0x00
+
+3) Wait for the measurements to complete
+
+4) Read the output data from register 0x00 (temperature) followed by 0x01 (HR)
+
+
