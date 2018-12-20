@@ -43,7 +43,7 @@ class Slave :
 		return 19.4
 
 	def sendTemperature(self) :
-		self.client.publish('ECAM/jordan', self.getTemperature(), 0, False)
+		self.client.publish('ECAM/jordan', self.getTemperature(), 1, False)
 	
 	# GET SENSOR VALUE
 	def getValue(self, index) :
